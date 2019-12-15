@@ -6,4 +6,33 @@
 
 body{
 	background-color: #dedede;
+	overflow-x: hidden;
+}
+.navbar{
+	height: 8vh;
+}
+
+.nav-side{
+	height:92vh;
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.content-sec{
+	margin-right: 0;
+	padding-right: 0;
+	overflow: hidden;
+}
+
+#TODOs{
+	margin: 3px;
+	max-height: 60vh;
+}
+
+#TODOlist{
+	overflow:auto;
+}
+
+.list-group-item{
+	color: white;
 }
