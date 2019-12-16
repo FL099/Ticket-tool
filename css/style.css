@@ -34,13 +34,19 @@ body{
 
 
 .content-sec{
+	height: 92vh;
 	margin-right: 0;
-	padding-left: 1.5%;
+	padding-left: 3%;
 	padding-top: 1.5%;
 	padding-right: 0;
-	overflow: hidden;
+	overflow: auto;
 }
 
 #overview{
 	max-width: 100%;
+}
+
+#overview .row div{
+	margin-right: 2vw;
+	margin-bottom: 2vh;
 }
