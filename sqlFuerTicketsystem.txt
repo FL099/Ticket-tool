@@ -1,0 +1,50 @@
+#users erstellen
+CREATE TABLE ticketsystem.users(
+    UserID int(4) unsigned not null auto_increment,
+    password varchar(16),
+    firstday date,
+    hashvalue varchar(255)
+);
+
+#userdata erstellen
+CREATE TABLE ticketsystem.userdata(
+    userid int(4) unsigned primary key not null,
+    email varchar(40) unique,
+    firstname varchar(40),
+    lastname varchar(40),
+    telephone int(20) null unique,
+    FOREIGN KEY (userid) REFERENCES ticketsystem.users(userid)
+);
+
+#categories erstellen
+CREATE TABLE ticketsystem.catagories(
+    category int(2) primary key,
+    categoryname varchar(40) not null
+);
+
+#tickets erstellen
+CREATE TABLE ticketsystem.tickets(
+    ticketid int(12) unsigned not null primary key,
+    heading varchar(150) not null,
+    text nvarchar(5000),
+    category int(2),
+    creator int(4) unsigned not null,
+    edited date,
+    editedby int(4) unsigned not null,
+    assignedto int(4) unsigned not null,
+    FOREIGN KEY (category) REFERENCES ticketsystem.catagories(category),
+    FOREIGN KEY (creator) REFERENCES ticketsystem.users(UserID),
+    FOREIGN KEY (editedby) REFERENCES ticketsystem.users(UserID),
+    FOREIGN KEY (assignedto) REFERENCES ticketsystem.users(UserID)
+);
+
+#Datensatz zu users hinzufügen:
+INSERT INTO ticketsystem.users (password, firstday, hashvalue)
+VALUES ('HalloDuDa', '2019-12-01', 'HEWWALCCXSFDH');
+
+#Datensatz bei users verändern:
+UPDATE ticketsystem.users
+SET password = 'Dummypasswort',
+    firstday = '0000-00-00',
+    hashvalue = 'DUMMYVALUE'
+WHERE UserID = 1
