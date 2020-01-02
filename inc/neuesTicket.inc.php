@@ -3,7 +3,7 @@
 <h1>Ticket hinzufügen</h1><br>
 <div class="container" id="overview">
     <div class="row">
-        <form>
+        <form action="index.php?section=overview">
             <div class="form-row">
                 <div class="form-group col-md-10">
                     <label for="titel">Titel/ Kurzzusammenfassung*</label>
@@ -49,7 +49,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" formaction="post">Sign in</button>
+            <button type="submit" class="btn btn-primary">Erstellen</button>
         </form>
     </div>
 </div>

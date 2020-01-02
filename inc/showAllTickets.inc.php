@@ -27,7 +27,8 @@ $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
                     echo "<td>$heading[$x]</td>";
                     echo "<td>$kategorie[$x]</td>";
                     echo "<td>$inhalt[$x]</td>";
-                    echo "<td>$zugewiesen[x]</td></tr>";
+                    echo "<td>$zugewiesen[$x]</td></tr>";
+                    $x++;
                 };
                 ?>
                 <tr>

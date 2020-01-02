@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
 ?>
 <!doctype html>
@@ -35,17 +36,17 @@
           				Schnellfunktionen
         				</a>
         			<div class="dropdown-menu bg-dark text-white" aria-labelledby="navbarDropdown">
-          				<a class="dropdown-item text-primary" href="#">Meine Tickets</a>
-          				<a class="dropdown-item text-primary" href="#">Offene Tickets</a>
+          				<a class="dropdown-item text-primary" href="?section=mine">Meine Tickets</a>
+          				<a class="dropdown-item text-primary" href="?section=all">Offene Tickets</a>
           				<div class="dropdown-divider"></div>
-          				<a class="dropdown-item text-primary" href="#">Ticket hinzufügen</a>
+          				<a class="dropdown-item text-primary" href="?section=add">Ticket hinzufügen</a>
         			</div>
       			</li>
       			<li class="nav-item">
         			<a class="nav-link disabled" href="#abmelden" tabindex="-1" aria-disabled="true">Abmelden</a>
       			</li>
 				<li class="nav-item">
-        			<a class="nav-link" href="#settings">Einstellungen</a>
+        			<a class="nav-link" href="?section=settings">Einstellungen</a>
       			</li>
     		</ul>
     		<form class="form-inline my-2 my-lg-0">
@@ -86,25 +87,50 @@
 			*
 			*
 			*
-			Hier kommt der gesammte Content her (also eingebundene PHP files)
+			Hier kommt der gesamte Content her (also eingebundene PHP files)
 			*
 			*
 			*
 			-->
-            <?php include "inc/neuesTicket.inc.php";?>
+            <?php
+            if(isset($_GET['section'])) {
+                switch($_GET['section']) {
+                    case"overview":
+                        include "inc\overview.inc.php";
+                        break;
+                    case"all":
+                        include"inc\showAllTickets.inc.php";
+                        break;
+                    case"mine":
+                        include"inc\showMyTickets.inc.php";
+                        break;
+                    case"settings":
+                        include"inc\settings.inc.php";
+                        break;
+                    default:// Wenn ungültige Section, Übersicht zeigen
+                        include"inc\overview.inc.php";
+                        break;
+                }
+            } else{
+                //wenn section nicht angegeben wurde//wird die Übersicht angezeigt
+                include"inc\overview.inc.php";
+            }
+            ?>
 
 
-	  	</div>
-	</div>
-	</div>
+        </div>
+    </div>
+    </div>
 
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
+
+}
