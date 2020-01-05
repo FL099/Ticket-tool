@@ -3,7 +3,7 @@
 $num = array(1,2,3,4,5);
 $heading = array("Die Farbkombi gefällt mir nicht", "Stürzt andauernd ab", "Ich kann mich nicht einloggen", "Es lagt andauernd", "Ich brauche mehr Funktionen");
 $kategorie = array("TODOs", "Alarmstufe rot", "Alarmstufe rot", "wichtig", "TODOs");
-$inhalt = array("Ich will besser abgestimmte Farben", "Sobald ich etwas verändern will stürzt es ab und ich muss es neu starten", "Ich weiß, dass ich das richtige Passwort und Usernamen verwenden, aber kann mich sehr oft nicht anmelden","Zb eine bessere Übersicht wäre schön");
+$inhalt = array("Ich will besser abgestimmte Farben", "Sobald ich etwas verändern will stürzt es ab und ich muss es neu starten", "Ich weiß, dass ich das richtige Passwort und Usernamen verwenden, aber kann mich sehr oft nicht anmelden","Zb eine bessere Übersicht wäre schön", "Ich kann gewisse Sachen nicht machen, die ich von anderen Systemen gewohnt bin.");
 ?>
 <h1>Ihnen zugewiesene Tickets</h1>
 <div class="container" id="overview">
@@ -25,14 +25,9 @@ $inhalt = array("Ich will besser abgestimmte Farben", "Sobald ich etwas verände
                         echo "<td>$heading[$x]</td>";
                         echo "<td>$kategorie[$x]</td>";
                         echo "<td>$inhalt[$x]</td></tr>";
+                        $x++;
                     };
                 ?>
-					<tr>
-						<th scope="row">1</th>
-						<td>Tickets verschwinden</td>
-						<td>sehr wichtig</td>
-						<td>Wenn ein neues Ticket gea...</td>
-					</tr>
 				</tbody>
 			</table>
 		</div>

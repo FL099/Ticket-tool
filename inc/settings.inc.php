@@ -5,42 +5,37 @@
 	<div class="row">
 		<div class="col-10">
             <form action="index.php">
-                <div class="form-row">
-                    <div class="form-group col-md-10">
-                        <label for="titel">Titel/ Kurzzusammenfassung*</label>
-                        <input type="text" class="form-control" id="titel" placeholder="Totalausfall" required>
-                    </div>
-                </div>
                 <div class="form-group">
-                    <label for="description">Genauere Beschreibung:</label>
-                    <input type="text" class="form-control" id="description" placeholder="Nichts geht mehr!">
-                </div>
-                <div class="form-group">
-                    <label for="project">Projekt</label>
+                    <label for="project">Projekteinstellungen</label>
                     <select id="project" class="form-control" disabled>
                         <option>Sie haben nicht die Befugnis</option>
                     </select>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-10">
-                        <label for="category">Kategorie*</label>
-                        <select id="category" class="form-control" required>
+                        <label for="color">Akzentfarbe*</label>
+                        <select id="color" class="form-control" required>
                             <option selected>Auswählen...</option>
+                            <option>red</option>
+                            <option>blue</option>
+                            <option>cyan</option>
                             <option>...</option>
                         </select>
                     </div>
                     <div class="form-group col-md-10">
-                        <label for="assign">Zuweisen</label>
+                        <label for="assign">Benachrichtigung bei mir neu zugewiesenen Tickets</label>
                         <select id="assign" class="form-control" required>
                             <option selected>Auswählen...</option>
+                            <option>email Benachrichtigung</option>
+                            <option>popup Benachrichtigung</option>
                             <option>...</option>
                         </select>
                     </div>
                 </div>
-                <label for="customFile">Zusatzinfos</label>
+                <label for="profilepic">Zusatzinfos</label>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Screenshot o.ä hochladen</label>
+                    <input type="file" class="custom-file-input" id="profilepic">
+                    <label class="custom-file-label" for="profilepic">neues Profilbild hochladen</label>
                 </div>
                 <div class="form-group">
                     <div class="form-check">

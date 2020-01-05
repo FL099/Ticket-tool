@@ -6,7 +6,7 @@ $kategorie = array("TODOs", "Alarmstufe rot", "Alarmstufe rot", "wichtig", "TODO
 $inhalt = array("Ich will besser abgestimmte Farben", "Sobald ich etwas verändern will stürzt es ab und ich muss es neu starten", "Ich weiß, dass ich das richtige Passwort und Usernamen verwenden, aber kann mich sehr oft nicht anmelden","Zb eine bessere Übersicht wäre schön", "Vielleicht ein bisschen mehr Farbe reinbringen");
 $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
 ?>
-<h1>Ihnen zugewiesene Tickets</h1>
+<h1>Alle offenen Tickets</h1>
 <div class="container" id="overview">
     <div class="row">
         <div class="col-11">
@@ -22,14 +22,14 @@ $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
                 </thead>
                 <tbody>
                 <?php
-                for ($x=0; $x < count($num);){
-                    echo "<tr><th scope=\"row\">$num[$x]</th>";
-                    echo "<td>$heading[$x]</td>";
-                    echo "<td>$kategorie[$x]</td>";
-                    echo "<td>$inhalt[$x]</td>";
-                    echo "<td>$zugewiesen[$x]</td></tr>";
-                    $x++;
-                };
+                    for ($x=0; $x < count($num);){
+                        echo "<tr><th scope=\"row\">$num[$x]</th>";
+                        echo "<td>$heading[$x]</td>";
+                        echo "<td>$kategorie[$x]</td>";
+                        echo "<td>$inhalt[$x]</td>";
+                        echo "<td>$zugewiesen[$x]</td></tr>";
+                        $x++;
+                    };
                 ?>
                 <tr>
                     <th scope="row">1</th>

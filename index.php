@@ -17,7 +17,7 @@
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#content">
+		<a class="navbar-brand" href="index.php">
     		<img src="img/file-notes-document.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     		Ticketinator
   		</a>
@@ -55,21 +55,23 @@
     		</form>
   		</div>
 	</nav>
-	<div class="container-fluid">
+	<div class="container-fluid" id="body">
 
 	<div class="row">
   		<div class="col-2 bg-dark nav-side">
 		    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-		      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Übersicht</a>
-		      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meine Tickets</a>
-		      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Alle Tickets</a>
+		      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="" role="tab" aria-controls="v-pills-home" aria-selected="true">Übersicht</a>
+		      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="?section=mine" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meine Tickets</a>
+		      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#?section=all" role="tab" aria-controls="v-pills-messages" aria-selected="false">Alle Tickets</a>
 		      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Meine Projekte</a>
 		    </div>
 
 			<div style="height:10vh;">
 
 			</div>
-			<div class="card bg-dark " id="TODOs">
+            <?php
+            require "inc/todo.inc.php"?>
+			<!--<div class="card bg-dark " id="TODOs">
 				<div class="card-header" style="color: white;">
 				wichtige TODO's
 				</div>
@@ -78,7 +80,7 @@
 					<li class="list-group-item bg-secondary">Dapibus ac facilisis in</li>
 					<li class="list-group-item bg-secondary">Vestibulum at eros</li>
 				</ul>
-			</div>
+			</div>-->
 		</div>
 
 
@@ -106,6 +108,12 @@
                         break;
                     case"settings":
                         include"inc\settings.inc.php";
+                        break;
+                    case"add":
+                        include"inc/neuesTicket.inc.php";
+                        break;
+                    case"search":
+                        include"inc/search.inc.php";
                         break;
                     default:// Wenn ungültige Section, Übersicht zeigen
                         include"inc\overview.inc.php";
