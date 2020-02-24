@@ -61,8 +61,8 @@
   		<div class="col-2 bg-dark nav-side">
 		    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 		      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="" role="tab" aria-controls="v-pills-home" aria-selected="true">Übersicht</a>
-		      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="?section=mine" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meine Tickets</a>
-		      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#?section=all" role="tab" aria-controls="v-pills-messages" aria-selected="false">Alle Tickets</a>
+		      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="index.php/?section=mine" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meine Tickets</a>
+		      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="index.php/?section=all" role="tab" aria-controls="v-pills-messages" aria-selected="false">Alle Tickets</a>
 		      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Meine Projekte</a>
 		    </div>
 
