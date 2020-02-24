@@ -1,6 +1,6 @@
 #users erstellen
 CREATE TABLE ticketsystem.users(
-    UserID int(4) unsigned not null auto_increment,
+    UserID int(4) unsigned primary key not null auto_increment,
     password varchar(16),
     firstday date,
     hashvalue varchar(255)
