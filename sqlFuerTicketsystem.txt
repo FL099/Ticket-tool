@@ -1,3 +1,7 @@
+drop database ticketsystem;
+create database ticketsystem;
+use ticketsystem;
+
 #users erstellen
 CREATE TABLE ticketsystem.users(
     UserID int(4) unsigned primary key not null auto_increment,
