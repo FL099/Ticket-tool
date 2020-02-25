@@ -22,6 +22,7 @@ $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
                 </thead>
                 <tbody>
                 <?php
+                include "dbconn.php";
                     for ($x=0; $x < count($num);){
                         echo "<tr><th scope=\"row\">$num[$x]</th>";
                         echo "<td>$heading[$x]</td>";
@@ -30,6 +31,7 @@ $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
                         echo "<td>$zugewiesen[$x]</td></tr>";
                         $x++;
                     };
+                    echo $_GET["section"];
                 ?>
                 <tr>
                     <th scope="row">1</th>

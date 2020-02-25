@@ -20,6 +20,7 @@ $inhalt = array("Ich will besser abgestimmte Farben", "Sobald ich etwas verände
 				</thead>
     			<tbody>
                 <?php
+                include "dbconn.php";
                     for ($x=0; $x < count($num);){
                         echo "<tr><th scope=\"row\">$num[$x]</th>";
                         echo "<td>$heading[$x]</td>";

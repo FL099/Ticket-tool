@@ -3,7 +3,7 @@
 <h1>Ticket hinzufügen</h1><br>
 <div class="container" id="overview">
     <div class="row">
-        <form action="index.php?section=overview">
+        <form action="index.php?section=overview" method="post">
             <div class="form-row">
                 <div class="form-group col-md-10">
                     <label for="titel">Titel/ Kurzzusammenfassung*</label>
