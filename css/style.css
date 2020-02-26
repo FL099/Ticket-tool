@@ -11,6 +11,9 @@ body{
 .navbar{
 	height: 8vh;
 }
+#body{
+	overflow-y: hidden;
+}
 
 .nav-side{
 	height:92vh;
