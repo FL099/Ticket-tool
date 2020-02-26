@@ -31,7 +31,6 @@ $zugewiesen = array("Erich", "Erich", "Albert", "-", "Anna", "Dieter");
                         echo "<td>$zugewiesen[$x]</td></tr>";
                         $x++;
                     };
-                    echo $_GET["section"];
                 ?>
                 <tr>
                     <th scope="row">1</th>

@@ -115,6 +115,9 @@
                     case"search":
                         include"inc/search.inc.php";
                         break;
+                    case"ticket":
+                        include"inc/ticketview.php";
+                        break;
                     default:// Wenn ungültige Section, Übersicht zeigen
                         include"inc\overview.inc.php";
                         break;
